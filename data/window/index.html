@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decrypt ENEX files</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <form id="perform">
+    <div class="body">
+      <div>
+        <label for="enex">Evernote Encrypted Files (enex)</label>
+        <input type="file" multiple accept=".enex" id="enex">
+      </div>
+      <div>
+        <label for="conversion">Decryption Formatting</label>
+        <select id="conversion">
+          <option value="plain-text">Plain Text</option>
+          <option value="html-block">HTML Block</option>
+        </select>
+      </div>
+      <div>
+        <span>Re-Encrypt to</span>
+        <div class="encryption">
+          <input type="radio" name="encryption" id="plain-text" checked>
+          <label for="plain-text">Plain Text</label>
+          <span></span>
+          <input type="radio" name="encryption" id="encrypted-text">
+          <label for="encrypted-text">Encrypted Text</label>
+          <div class="options">
+            <label for="hash">Hashing</label>
+            <select id="hash">
+              <option value="SHA-256">SHA-256</option>
+              <option value="SHA-512">SHA-512</option>
+            </select>
+            <label for="algorithm">Algorithm</label>
+            <select id="algorithm">
+              <option value="AES-CBC">AES-CBC</option>
+              <option value="AES-GCM">AES-GCM</option>
+            </select>
+            <label for="iterations">Iterations</label>
+            <input type="number" id="iterations" value="50000">
+            <label for="prepend">Prepend</label>
+            <input type="text" id="prepend">
+            <label for="append">Append</label>
+            <input type="text" id="append">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="samples">
+      <span>Configure for</span>
+      <input type="button" value="Meld Encrypt" id="obsidian-encrypt">
+      <input type="button" value="Inline Encrypter" id="obsidian-inline-encrypter">
+    </div>
+    <div class="action">
+      <input type="submit" value="Proceed">
+    </div>
+  </form>
+  <script type="text/javascript" src="configure.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

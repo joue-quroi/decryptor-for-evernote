@@ -1,0 +1,26 @@
+{
+  "name": "Decrypt Notes for Evernote™",
+  "description": "Decrypt encrypted strings in Evernote's 'enex' file and optionally encrypt in new format",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "offline_enabled": true,
+  "action": {},
+  "icons": {
+    "16": "/data/icons/16.png",
+    "32": "/data/icons/32.png",
+    "48": "/data/icons/48.png",
+    "64": "/data/icons/64.png",
+    "128": "/data/icons/128.png",
+    "256": "/data/icons/256.png",
+    "512": "/data/icons/512.png"
+  },
+  "commands": {
+    "_execute_action": {}
+  }
+}
